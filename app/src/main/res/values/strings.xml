@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Rx Rss</string>
+
+    <string name="un_network">无网络可用</string>
+    <string name="no_news">暂无收藏 </string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <string name="press_exit">Press again to exit the program</string>
+
+    <string name="news_image">新闻图片</string>
+    <string name="action_fav">收藏</string>
+    <string name="action_share">分享</string>
+
+    <string name="action_settings">设置</string>
+    <string name="action_main_share">分享</string>
+    <string name="action_comment">去市场评论</string>
+
+    <string-array name="news_array">
+        <item>今日焦点</item>
+        <item>十大热门文章</item>
+        <item>每日英语</item>
+        <item>第一时间解读</item>
+        <item>远观中国</item>
+        <item>中国纪事</item>
+        <item>朝九晚五</item>
+        <item>生活时尚</item>
+        <item>读者有话说</item>
+        <item>马丁 沃尔夫</item>
+    </string-array>
+
+    <!--  Strings for possible PreferenceActivity Back/Next buttons -->
+    <string name="back_button_label">Back</string>
+    <string name="next_button_label">Next</string>
+
+    <!-- Optional button to Skip a PreferenceActivity [CHAR LIMIT=20] -->
+    <string name="skip_button_label">Skip</string>
+
+</resources>

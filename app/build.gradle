@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.buglai.rxrss"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 100
+        versionName "1.00"
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(STORE_FILE)
+            storePassword STORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    productFlavors {
+        firme {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "firme"]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
+        googleplay{
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "googleplay"]
+        }
+    }
+
+
+
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile('com.squareup.retrofit2:converter-simplexml:2.0.0-beta4') {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    compile 'io.reactivex:rxandroid:1.0.1'
+
+    compile 'it.sephiroth.android.library.bottomnavigation:bottom-navigation:1.0.7'
+    compile 'org.jsoup:jsoup:1.9.1'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+
+    compile 'com.android.support:multidex:1.0.0'
+}

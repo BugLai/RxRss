@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout="@layout/pref_item"
+    android:title="Setting">
+    <PreferenceCategory
+        android:layout="@layout/pref_category_widget"
+        android:title="Options">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="set_cache"
+            android:layout="@layout/pref_item"
+            android:summaryOff="从网络请求数据"
+            android:summaryOn="从缓存中获取数据"
+            android:title="缓存模式"></CheckBoxPreference>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="set_image"
+            android:layout="@layout/pref_item"
+            android:summaryOff="任何网络下下载图片"
+            android:summaryOn="仅在Wifi下下载图片"
+            android:title="图片模式"
+
+            ></CheckBoxPreference>
+
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/pref_category_widget"
+        android:title="Others">
+        <Preference
+            android:key="set_about"
+            android:layout="@layout/pref_item"
+            android:title="关于">
+
+        </Preference>
+
+        <!--        <Preference
+            android:layout="@layout/pref_item"
+            android:title="手动检查更新">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://fir.im/3hse" />
+        </Preference> -->
+
+
+        <Preference
+            android:key="set_like"
+            android:layout="@layout/pref_item"
+            android:summary="假如您觉得不错，请赞！"
+            android:title="赞我 !">
+
+        </Preference>
+
+        <!--       <Preference
+          android:key="set_money"
+          android:layout="@layout/pref_item"
+          android:summary="金额随意，您的支持将是我进步的阶梯"
+          android:title="打个小赏">
+      </Preference> -->
+
+
+
+  </PreferenceCategory>
+
+
+</PreferenceScreen>
